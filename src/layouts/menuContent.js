@@ -42,7 +42,7 @@ export default class MenuContent extends Component {
             <Menu.Item key="dataTransfer">
               <Link to="dataTransfer">
                 <Icon type="user" />
-                <span>学习数据流</span>
+                <span>学习数据流111</span>
               </Link>
             </Menu.Item>
           </Menu.SubMenu>

@@ -1,8 +1,4 @@
-import request from '../utils/request';
-
-// export function badges() {
-//   return request(`https://cdn.xgqfrms.xyz/json/badges.json`);
-// }
+import { post } from '../utils/request';
 
 export function shoppingWZ() {
   return { data: ['天猫', '京东', '苏宁'] };
@@ -12,8 +8,7 @@ export function shoppingWZ() {
 // }
 
 export function create(values) {
-  return request('/api/users', {
-    method: 'POST',
+  return post('/api/users', {
     body: JSON.stringify(values),
   });
 }

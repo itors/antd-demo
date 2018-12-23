@@ -1,21 +1,20 @@
-import { Layout, Drawer} from 'antd';
+import { Layout, message} from 'antd';
 import BaseLeftLayout from './baseLeftLayout'
 import ScrollBar from 'smooth-scrollbar';
-import { enquireScreen } from 'enquire-js';
+import { enquireScreen, unenquireScreen } from 'enquire-js';
 import Header from './header'
-const { Sider, Content } = Layout;
+const { Content } = Layout;
 import style from './index.less'
+
 
 export default class SiderDemo extends React.Component {
   state = {
     collapsed: false,
-    isMobile: false,
+    platform: 0,
   };
-  componentDidMount() {
-    // 滚动条
-    ScrollBar.init(document.getElementsByClassName("rightLayoutContext")[0]);
 
-    // 手机类型
+  componentWillMount() {
+    // 浏览器类型
     enquireScreen(mobile => {
       const { isMobile } = this.state;
       if (isMobile !== mobile) {
@@ -25,7 +24,10 @@ export default class SiderDemo extends React.Component {
       }
     });
   }
-
+  componentDidMount() {
+    // 滚动条
+    ScrollBar.init(document.getElementsByClassName("rightLayoutContext")[0]);
+  }
   toggle = () => {
     this.setState({
       collapsed: !this.state.collapsed,
@@ -37,10 +39,12 @@ export default class SiderDemo extends React.Component {
     const { collapsed, isMobile } = this.state;
     return (
       <Layout>
-        <BaseLeftLayout {...{collapsed,isMobile}} 
+        <BaseLeftLayout 
             toggle = {this.toggle.bind(this)}
+            isMobile = {isMobile}
+            collapsed = {collapsed}
          />
-        <Layout ref="rightContent" className={style.rightLayoutContext}>
+        <Layout ref="rightContent" className="rightLayoutContext">
           <Header toggleCollapsed={this.toggle} isMobile={isMobile}/>
           <Content className={style.layoutContext} >
              { children }
