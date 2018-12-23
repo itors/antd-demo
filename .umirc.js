@@ -6,7 +6,7 @@ export default {
       antd: true,
       dva: true,
       dynamicImport: false,
-      title: 'umi-dva-antd-project',
+      title: 'my-antd',
       dll: false,
       routes: {
         exclude: [],
@@ -16,11 +16,11 @@ export default {
   ],
   cssLoaderOptions:{
     localIdentName:'[local]'
-  }
+  },
    // 修改antd主题样式
-  // theme: {
-  //   "@primary-color": "#30b767", // 全局主色
-  //   "@link-color": #1890ff, // 链接色
-  //   "@success-color": #52c41a, // 成功色
-  // }
+  theme: {
+    // "@primary-color": "#30b767", // 全局主色
+    // "@link-color": '#1890ff', // 链接色
+    // "@success-color": '#52c41a', // 成功色
+  }
 }

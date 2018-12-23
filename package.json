@@ -1,10 +1,10 @@
 {
-  "name": "umi-test-pro",
+  "name": "my-antd",
   "version": "0.1.0",
   "private": true,
-  "description": "this is personal project for some test",
+  "description": "this is personal project for some study",
   "scripts": {
-    "start": "cross-env PORT=8090 umi dev",
+    "start": "umi dev",
     "build": "umi build",
     "test": "umi test",
     "lint": "eslint --ext .js src",
@@ -13,6 +13,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "css-scss": "^0.1.1",
+    "enquire": "0.0.2",
+    "enquire-js": "^0.2.1",
     "react-document-title": "^2.0.3",
     "smooth-scrollbar": "^8.3.1"
   },

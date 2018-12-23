@@ -1,0 +1,78 @@
+.layout-side{
+  overflow: 'auto'; 
+  height: '100vh';
+  position: 'fixed'; 
+  left: 0;
+}
+
+.layout-right{
+   transition: all 0.4s;
+   .layout-right-content{
+      padding: 24;
+      background: '#fff';
+      margin-top: 80px;
+      margin-left: 10px;
+   }
+}
+.logoBox {
+  margin: 16px 9px;
+  height: 32px;
+  vertical-align: middle;
+  text-align: center;
+}
+.logo {
+  height: 32px;
+  width: 32px;
+  background-image:  url('../assets/logo.svg') ;
+  background-repeat: no-repeat ;
+  background-size: 32px 32px;
+  float: left;
+}
+.logoName{
+  width:calc(100% - 32px);
+  height: 32px;
+  float: right;
+  vertical-align: middle;
+  font-size: 22px; 
+  color: #ffffff;
+  padding-left: 5px;
+  text-align: left;
+}
+.sideLayout,.sideCollapsed{
+  box-shadow: 2px 0 6px rgba(0,21,41,.35);
+  position: relative;
+  z-index: 20;
+  height: 100vh;
+}
+.sideCollapsed{
+  flex: 0 0 50px !important;
+  max-width: 50px !important;
+  min-width: 50px !important;
+  width: 50px !important;
+}
+.ant-menu{
+  transition: all 0.1s 0s;
+}
+.ant-menu-inline{
+  transition: all 0.1s 0s;
+}
+.ant-menu-vertical{
+  width: 50px;
+  transition: all 0.1s ;
+}
+.ant-menu-inline-collapsed > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title{
+    padding-left: 17px !important;
+}
+.rightLayoutContext{
+  height: auto ;
+}
+.layoutContext{
+  margin: 10px 10px;
+  padding: 24px;
+  background:#fff;
+  min-height:calc(100vh - 89px);     
+}
+.ant-drawer-body,.ant-drawer .ant-drawer-content{
+  padding: 0;
+  background-color: #001529;
+}
